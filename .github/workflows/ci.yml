@@ -29,5 +29,5 @@ jobs:
       - name: Run benchmarks
         run: go test -bench=. -benchmem ./...
 
-      - name: Run demo
-        run: go run examples/demo.go
+      - name: Run example
+        run: go run examples/main.go
