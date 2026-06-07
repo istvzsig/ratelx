@@ -17,14 +17,17 @@ jobs:
         with:
           go-version: stable
 
-      - name: Download dependencies
+      - name: Download deps
         run: go mod tidy
 
       - name: Run tests
         run: go test -v ./...
 
-      - name: Run race tests
+      - name: Run race detector
         run: go test -race ./...
 
-      - name: Run demo (ratelx)
+      - name: Run benchmarks
+        run: go test -bench=. -benchmem ./...
+
+      - name: Run demo
         run: go run examples/demo.go
