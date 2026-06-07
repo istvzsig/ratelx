@@ -1,5 +1,7 @@
 # ratelx
 
+![CI](https://github.com/istvzsig/ratelx/actions/workflows/ci.yml/badge.svg)
+
 > Lightweight, dependency-free rate limiter for Go (token bucket)
 
 ratelx provides simple, production-ready primitives to control request flow in backend systems.
